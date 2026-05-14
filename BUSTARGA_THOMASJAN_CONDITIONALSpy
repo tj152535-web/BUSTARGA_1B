@@ -1,0 +1,41 @@
+# ============================================
+# Library Fine Checker
+# Created by: [Your Name]
+# Topic: Conditional Statements and try/except
+# ============================================
+
+# This program checks if a student has
+# overdue books and calculates the fine.
+
+print("=== Library Fine Checker ===")
+
+try:
+    # User input
+    days = int(input("Enter number of overdue days: "))
+
+    print("\n===== RESULT =====")
+
+    # Conditional statements
+    if days == 0:
+        print("No overdue books.")
+        print("No fine needed.")
+
+    elif days <= 5:
+        fine = days * 10
+        print("Minor overdue.")
+        print("Fine:", fine)
+
+    elif days <= 10:
+        fine = days * 15
+        print("Moderate overdue.")
+        print("Fine:", fine)
+
+    else:
+        fine = days * 20
+        print("Severe overdue.")
+        print("Library access temporarily restricted.")
+        print("Fine:", fine)
+
+except:
+    # Error handling
+    print("Error: Please enter a valid number.")
